@@ -76,16 +76,16 @@ h2 {
 
 aside {
     border: 1px solid black;
-    min-width: 400px;
-    max-width: 1000px;
-    margin: 10px;
-    display: flex;
+    width: 420px;
+    display: block;
+    margin: auto;
 }
 
 p {
     text-indent: 30px;
     text-align: justify;
-    line-height: 25px;
+    line-height: 20px;
+    padding: 10px;
 }
 
 img {
