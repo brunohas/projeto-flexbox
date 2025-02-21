@@ -22,10 +22,11 @@
         }
     </style>
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Flexbox</h1>
-        <menu>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+        <menu id="itens">
             <a href="#">Direção e Quebra de linha</a>
             <a href="#">Alinhamento do contêiner</a>
             <a href="#">Alinhamento do item</a>
@@ -40,29 +41,29 @@
         <aside>
             <pre>
                 <code>
-        &lt;body&gt;
-            (pai) &rarr; &lt;div class="container"&gt;
-            (filho)  &rarr;  &lt;div class="item"&gt;A&lt;/div&gt;
-            (filho)  &rarr;  &lt;div class="item"&gt;B&lt;/div&gt;
-            (filho)  &rarr;  &lt;div class="item"&gt;C&lt;/div&gt;
-            (filho)  &rarr;  &lt;div class="item"&gt;D&lt;/div&gt;
-            (filho)  &rarr;  &lt;div class="item"&gt;E&lt;/div&gt;
-            (filho)  &rarr;  &lt;div class="item"&gt;F&lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/body&gt;
+    &lt;body&gt;
+        (pai) &rarr; &lt;div class="container"&gt;
+        (filho)  &rarr;  &lt;div class="item"&gt;A&lt;/div&gt;
+        (filho)  &rarr;  &lt;div class="item"&gt;B&lt;/div&gt;
+        (filho)  &rarr;  &lt;div class="item"&gt;C&lt;/div&gt;
+        (filho)  &rarr;  &lt;div class="item"&gt;D&lt;/div&gt;
+        (filho)  &rarr;  &lt;div class="item"&gt;E&lt;/div&gt;
+        (filho)  &rarr;  &lt;div class="item"&gt;F&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
 
 
-        &lt;style&gt;
-            div.container {
-                background-color: lightsalmon;
-                <mark>display: flex;</mark>
-            }
-            div.item {
-                background-color: lightskyblue;
-                border: 1px solid black;
-                text-align: center
-                <mark>flex: auto;</mark>
-            }
+    &lt;style&gt;
+        div.container {
+            background-color: lightsalmon;
+            <mark>display: flex;</mark>
+        }
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center
+            <mark>flex: auto;</mark>
+        }
                 </code>
             </pre>
         </aside>
@@ -93,5 +94,23 @@
     <footer>
         <p>Esse site foi feito por Bruno Henrique afins de estudos!</p>
     </footer>
+
+    <script>
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+    </script>
 </body>
 </html>
