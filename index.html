@@ -6,6 +6,7 @@
     <link rel="shortcut icon" href="imagens/icon.png" type="image/x-icon">
     <title>Flexbox</title>
     <link rel="stylesheet" href="estilos/mobile.css">
+    <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
     <style>
         div.container {
@@ -15,7 +16,7 @@
         }
 
         div.item {
-            background-color: lightskyblue;
+            background-color: darkslategrey;
             border: 1px solid black;
             text-align: center;
             flex: auto;
@@ -34,62 +35,64 @@
         </menu>
     </header>
     <main>
-        <h2>O que é Flexbox?</h2>
-        <p>
-            O Flexbox é uma funcionalidade do CSS que permite organizar elementos em uma página da web de forma flexível, podemos organizar elementos em linhas e colunas, alinhar elementos horizontalmente e verticalmente, criar layouts dinâmicos, criar páginas que funcionam bem em diferentes tamanhos de tela, etc. Para usar o flexbox, é necessário especificar um contêiner (pai) e atribuir a propriedade <strong>display: flex;</strong>, e para os itens (filho) que estão dentro do container, atribuir a propriedade <strong>flex: auto;</strong> (não permite espaço em branco dentro do elemento pai) para que consiga ficar flexível. Por exemplo:
-        </p>
-        <aside>
-            <pre>
-                <code>
-    &lt;body&gt;
-        (pai) &rarr; &lt;div class="container"&gt;
-        (filho)  &rarr;  &lt;div class="item"&gt;A&lt;/div&gt;
-        (filho)  &rarr;  &lt;div class="item"&gt;B&lt;/div&gt;
-        (filho)  &rarr;  &lt;div class="item"&gt;C&lt;/div&gt;
-        (filho)  &rarr;  &lt;div class="item"&gt;D&lt;/div&gt;
-        (filho)  &rarr;  &lt;div class="item"&gt;E&lt;/div&gt;
-        (filho)  &rarr;  &lt;div class="item"&gt;F&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/body&gt;
-
-
-    &lt;style&gt;
-        div.container {
-            background-color: lightsalmon;
-            <mark>display: flex;</mark>
-        }
-        div.item {
-            background-color: lightskyblue;
-            border: 1px solid black;
-            text-align: center
-            <mark>flex: auto;</mark>
-        }
-                </code>
-            </pre>
-        </aside>
-        <div class="container">
-            <div class="item">A</div>
-            <div class="item">B</div>
-            <div class="item">C</div>
-            <div class="item">D</div>
-            <div class="item">E</div>
-            <div class="item">F</div>
-        </div>
-        <p>
-            Agora segue uma foto de uma exemplo de eixo da flexbox padrão:
-        </p>
-        <picture>
-            <source media="(max-width: 600px)" srcset="imagens/padrao-p.png" type="image/png">
-            <img src="imagens/padrao-g.png" alt="Modelo Flexbox">
-        </picture>
-        <ul class="dois">
-            <li><strong>main-axis</strong> &rarr; eixo principal.</li>
-            <li><strong>main-start</strong> &rarr; ponto inicial do eixo principal.</li>
-            <li><strong>main-end</strong> &rarr; ponto final do eixo principal.</li>
-            <li><strong>cross-axis</strong> eixo transversal.</li>
-            <li><strong>cross-start</strong> &rarr; ponto inicial do eixo transversal.</li>
-            <li><strong>cross-end</strong> &rarr; ponto final do eixo transversal.</li>
-        </ul>
+        <article>
+            <h2>O que é Flexbox?</h2>
+            <p>
+                O Flexbox é uma funcionalidade do CSS que permite organizar elementos em uma página da web de forma flexível, podemos organizar elementos em linhas e colunas, alinhar elementos horizontalmente e verticalmente, criar layouts dinâmicos, criar páginas que funcionam bem em diferentes tamanhos de tela, etc. Para usar o flexbox, é necessário especificar um contêiner (pai) e atribuir a propriedade <strong>display: flex;</strong>, e para os itens (filho) que estão dentro do container, atribuir a propriedade <strong>flex: auto;</strong> (não permite espaço em branco dentro do elemento pai) para que consiga ficar flexível. Por exemplo:
+            </p>
+            <aside>
+                <pre>
+                    <code>
+                &lt;body&gt;
+            (pai) &rarr; &lt;div class="container"&gt;
+            (filho)  &rarr;  &lt;div class="item"&gt;A&lt;/div&gt;
+            (filho)  &rarr;  &lt;div class="item"&gt;B&lt;/div&gt;
+            (filho)  &rarr;  &lt;div class="item"&gt;C&lt;/div&gt;
+            (filho)  &rarr;  &lt;div class="item"&gt;D&lt;/div&gt;
+            (filho)  &rarr;  &lt;div class="item"&gt;E&lt;/div&gt;
+            (filho)  &rarr;  &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+                &lt;/body&gt;
+            
+            
+                &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                <mark>display: flex;</mark>
+            }
+            div.item {
+                background-color: darkslategrey;
+                border: 1px solid black;
+                text-align: center
+                <mark>flex: auto;</mark>
+            }
+                    </code>
+                </pre>
+            </aside>
+            <div class="container">
+                <div class="item">A</div>
+                <div class="item">B</div>
+                <div class="item">C</div>
+                <div class="item">D</div>
+                <div class="item">E</div>
+                <div class="item">F</div>
+            </div>
+            <p>
+                Agora segue uma foto de uma exemplo de eixo da flexbox padrão:
+            </p>
+            <picture>
+                <source media="(max-width: 700px)" srcset="imagens/padrao-p.png" type="image/png">
+                <img src="imagens/padrao-g.png" alt="Modelo Flexbox">
+            </picture>
+            <ul class="dois">
+                <li><strong>main-axis</strong> &rarr; eixo principal.</li>
+                <li><strong>main-start</strong> &rarr; ponto inicial do eixo principal.</li>
+                <li><strong>main-end</strong> &rarr; ponto final do eixo principal.</li>
+                <li><strong>cross-axis</strong> eixo transversal.</li>
+                <li><strong>cross-start</strong> &rarr; ponto inicial do eixo transversal.</li>
+                <li><strong>cross-end</strong> &rarr; ponto final do eixo transversal.</li>
+            </ul>
+        </article>
     </main>
     <footer>
         <p>Esse site foi feito por Bruno Henrique afins de estudos!</p>

@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
@@ -7,11 +9,11 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #120F26;
+    background-color: #F2F2F2;
 }
 
 header {
-    background-image: linear-gradient(to top, #52498C, #302A59, #120F26);
+    background-color: black;
     padding: 5px;
 
     display: flex;
@@ -21,6 +23,8 @@ header {
 }    
 
 header > h1 {
+    font-family: 'Nabla', serif;
+    font-size: 50px;
     color: white;
     text-align: center;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
@@ -33,16 +37,16 @@ span#burguer {
     color: white;
     display: block;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     width: 90vw;
     border-radius: 15px;
     cursor: pointer;
 }
 
 span#burguer:hover {
-    background-color: #120F26;
+    background-color: darkslategrey;
     color: white;
-    transition-duration: 0.5s;
+    border: 1px solid black;
 }
 
 menu {
@@ -62,22 +66,20 @@ menu > a {
 }
 
 menu > a:hover {
-    background-color: #120F26;
+    background-color: darkslategrey;
     color: white;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
-
-    transition: 0.5s ease 0.1s;
+    border: 1px solid black;
 }
 
-main {
+article {
     min-width: 300px;
-    max-width: 1000px;
+    max-width: 800px;
     background-color: white;
     margin: auto;
     padding: 10px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7);
 }
 
 h2 {
@@ -96,7 +98,7 @@ aside {
 p {
     text-indent: 30px;
     text-align: justify;
-    line-height: 20px;
+    line-height: 25px;
     padding: 10px;
 }
 
@@ -104,6 +106,8 @@ img {
     display: block;
     margin: auto;
     padding: 20px;
+
+    filter: grayscale(100%) 
 }
 
 ul.dois {
@@ -121,23 +125,7 @@ footer {
 }
 
 footer > p {
+    font-size: 0.7em;
     text-align: center;
-    padding: 5px;
-}
-
-@media screen and (min-width: 768px) {
-    span#burguer {
-        display: none;
-    }
-
-    menu {
-        display: block;
-        transition: 0.3s;
-        margin: 5px;
-    }
-
-    menu > a {
-        display: inline;
-        padding: 5px;
-    }
+    padding: 2px;
 }

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) {
+    span#burguer {
+        display: none;
+    }
+
+    menu {
+        display: block;
+        transition: 0.3s;
+        margin: 5px;
+    }
+
+    menu > a {
+        display: inline;
+        padding: 7px;
+    }
+
+    body {
+        background-image: url(../imagens/fundo.jpg);
+        background-position: center center;
+        background-size: contain;
+        background-attachment: fixed;
+    }
+}
