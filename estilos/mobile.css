@@ -103,6 +103,7 @@ aside {
     width: 400px;
     display: block;
     margin: auto;
+    margin-bottom: 20px;
 }
 
 div.janela {
@@ -126,6 +127,11 @@ img {
     padding: 20px;
 
     filter: grayscale(100%) 
+}
+
+img.peq {
+    width: 80vw;
+    max-width: 600px;
 }
 
 ul.dois {

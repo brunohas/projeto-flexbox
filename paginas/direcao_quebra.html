@@ -164,13 +164,16 @@
         <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
         <menu id="itens">
             <a href="../index.html" rel="prev">Início</a>
-            <a href="#">Alinhamento do contêiner</a>
+            <a href="../paginas/alinhamento.html" rel="next">Alinhamento do contêiner</a>
             <a href="#">Alinhamento do item</a>
             <a href="#">Expansão e Redução dos itens</a>
         </menu>
     </header>
     <main>
         <article>
+            <p style="text-align: center;">
+               - Exemplo de Flexbox padrão -
+            </p>
             <picture>
                 <source media="(max-width: 700px)" srcset="../imagens/padrao-p.png" type="image/png">
                 <img src="../imagens/padrao-g.png" alt="Modelo Flexbox">
@@ -179,11 +182,12 @@
             <p>
                 Para dar a direção no eixo principal (<strong>main-axis</strong>) em uma <strong>flex-box</strong> usamos o atributo <strong>flex-direction</strong>, esse atributo define a direção em que os elementos flexíveis serão exibidos.
             </p>
+            <h3>flex-direction: row; - padrão</h3>
+            <p>
+                Define a direção do eixo principal (main-axis) em linha, da esquerda para a direita.
+            </p>
             <div class="janela">
-                <h3>flex-direction: row; - padrão</h3>
-                <p>
-                    Define a direção do eixo principal (main-axis) em linha, da esquerda para a direita.
-                </p>
+                <img src="../imagens/row.png" alt="Modelo Flexbox">
                 <aside>
                     <pre>
                         <code>
@@ -193,6 +197,8 @@
                 &lt;div class="item"&gt;B&lt;/div&gt;
                 &lt;div class="item"&gt;C&lt;/div&gt;
                 &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
             &lt;/div&gt;
         &lt;/body&gt;
         
@@ -209,21 +215,23 @@
         &lt;/style&gt;
                         </code>
                     </pre>
-                </aside>    
-                <div class="direction_row">
-                    <div class="item">A</div>
-                    <div class="item">B</div>
-                    <div class="item">C</div>
-                    <div class="item">D</div>
-                    <div class="item">E</div>
-                    <div class="item">F</div>
-                </div>
+                </aside>  
+            </div>      
+            <div class="direction_row">
+                <div class="item">A</div>
+                <div class="item">B</div>
+                <div class="item">C</div>
+                <div class="item">D</div>
+                <div class="item">E</div>
+                <div class="item">F</div>
             </div>
+            <hr>
+            <h3>flex-direction: row-reverse;</h3>
+            <p>
+                Define a direção do eixo principal (main-axis) em linha inversa, da direita para a esquerda.
+            </p>
             <div class="janela">
-                <h3>flex-direction: row-reverse;</h3>
-                <p>
-                    Define a direção do eixo principal (main-axis) em linha inversa, da direita para a esquerda.
-                </p>
+                <img src="../imagens/rrow.png" alt="Modelo Flexbox">
                 <aside>
                     <pre>
                         <code>
@@ -233,6 +241,8 @@
                 &lt;div class="item"&gt;B&lt;/div&gt;
                 &lt;div class="item"&gt;C&lt;/div&gt;
                 &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
             &lt;/div&gt;
         &lt;/body&gt;
         
@@ -249,21 +259,24 @@
         &lt;/style&gt;
                         </code>
                     </pre>
-                </aside>    
-                <div class="direction_rrow">
-                    <div class="item">A</div>
-                    <div class="item">B</div>
-                    <div class="item">C</div>
-                    <div class="item">D</div>
-                    <div class="item">E</div>
-                    <div class="item">F</div>
-                </div>
+                </aside> 
+            </div>       
+            <div class="direction_rrow">
+                <div class="item">A</div>
+                <div class="item">B</div>
+                <div class="item">C</div>
+                <div class="item">D</div>
+                <div class="item">E</div>
+                <div class="item">F</div>
             </div>
+            <hr>
+            <h3>flex-direction: column;</h3>
+            <p>
+                Define a direção do eixo principal (main-axis) em uma coluna, de cima para baixo.
+            </p>
             <div class="janela">
-                <h3>flex-direction: column;</h3>
-                <p>
-                    Define a direção do eixo principal (main-axis) em uma coluna, de cima para baixo.
-                </p>
+                
+                <img class="vertical" src="../imagens/column.png" alt="Modelo Flexbox">
                 <aside>
                     <pre>
                         <code>
@@ -273,6 +286,8 @@
                 &lt;div class="item"&gt;B&lt;/div&gt;
                 &lt;div class="item"&gt;C&lt;/div&gt;
                 &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
             &lt;/div&gt;
         &lt;/body&gt;
         
@@ -289,21 +304,23 @@
         &lt;/style&gt;
                         </code>
                     </pre>
-                </aside>    
-                <div class="direction_column">
-                    <div class="item">A</div>
-                    <div class="item">B</div>
-                    <div class="item">C</div>
-                    <div class="item">D</div>
-                    <div class="item">E</div>
-                    <div class="item">F</div>
-                </div>
+                </aside> 
+            </div>       
+            <div class="direction_column">
+                <div class="item">A</div>
+                <div class="item">B</div>
+                <div class="item">C</div>
+                <div class="item">D</div>
+                <div class="item">E</div>
+                <div class="item">F</div>
             </div>
+            <hr>
+            <h3>flex-direction: column-reverse;</h3>
+            <p>
+                Define a direção do eixo principal (main-axis) em um coluna inversa, de baixo para cima.
+            </p>
             <div class="janela">
-                <h3>flex-direction: column-reverse;</h3>
-                <p>
-                    Define a direção do eixo principal (main-axis) em um coluna inversa, de baixo para cima.
-                </p>
+                <img class="vertical" src="../imagens/rcolumn.png" alt="Modelo Flexbox">
                 <aside>
                     <pre>
                         <code>
@@ -313,6 +330,8 @@
                 &lt;div class="item"&gt;B&lt;/div&gt;
                 &lt;div class="item"&gt;C&lt;/div&gt;
                 &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
             &lt;/div&gt;
         &lt;/body&gt;
         
@@ -329,15 +348,15 @@
         &lt;/style&gt;
                         </code>
                     </pre>
-                </aside>    
-                <div class="direction_rcolumn">
-                    <div class="item">A</div>
-                    <div class="item">B</div>
-                    <div class="item">C</div>
-                    <div class="item">D</div>
-                    <div class="item">E</div>
-                    <div class="item">F</div>
-                </div>
+                </aside> 
+            </div>       
+            <div class="direction_rcolumn">
+                <div class="item">A</div>
+                <div class="item">B</div>
+                <div class="item">C</div>
+                <div class="item">D</div>
+                <div class="item">E</div>
+                <div class="item">F</div>
             </div>
         </article>
         <article class="seg">
@@ -345,11 +364,11 @@
             <p>
                 Para fazer a quebra de linha de um item flexível usamos o atributo <strong>flex-wrap</strong>, esse atributo define se os elementos flexíveis devem ser forçados a ficar em uma única linha, ou se podem ser quebrados em várias linhas.
             </p>
+            <h3>flex-wrap: nowrap; - padrão</h3>
+            <p>
+                Define que não irá ter quebra de linha nos elementos flexíveis.
+            </p>
             <div class="janela">
-                <h3>flex-wrap: nowrap; - padrão</h3>
-                <p>
-                    Define que não irá ter quebra de linha nos elementos flexíveis.
-                </p>
                 <aside>
                     <pre>
                         <code>
@@ -359,6 +378,8 @@
                 &lt;div class="item"&gt;B&lt;/div&gt;
                 &lt;div class="item"&gt;C&lt;/div&gt;
                 &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
             &lt;/div&gt;
         &lt;/body&gt;
         
@@ -376,21 +397,22 @@
         &lt;/style&gt;
                         </code>
                     </pre>
-                </aside>    
-                <div class="wrap_nowrap">
-                    <div class="witem">A</div>
-                    <div class="witem">B</div>
-                    <div class="witem">C</div>
-                    <div class="witem">D</div>
-                    <div class="witem">E</div>
-                    <div class="witem">F</div>
-                </div>
+                </aside>
+            </div>        
+            <div class="wrap_nowrap">
+                <div class="witem">A</div>
+                <div class="witem">B</div>
+                <div class="witem">C</div>
+                <div class="witem">D</div>
+                <div class="witem">E</div>
+                <div class="witem">F</div>
             </div>
+            <hr>
+            <h3>flex-wrap: wrap;</h3>
+            <p>
+                Define que irá ter quebra de linha nos elementos flexíveis quando um dos elementos não puder ser mais compactado.
+            </p>
             <div class="janela">
-                <h3>flex-wrap: wrap;</h3>
-                <p>
-                    Define que irá ter quebra de linha nos elementos flexíveis quando um dos elementos não puder ser mais compactado.
-                </p>
                 <aside>
                     <pre>
                         <code>
@@ -400,6 +422,8 @@
                 &lt;div class="item"&gt;B&lt;/div&gt;
                 &lt;div class="item"&gt;C&lt;/div&gt;
                 &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
             &lt;/div&gt;
         &lt;/body&gt;
         
@@ -417,21 +441,22 @@
         &lt;/style&gt;
                         </code>
                     </pre>
-                </aside>    
-                <div class="wrap_wrap">
-                    <div class="witem">A</div>
-                    <div class="witem">B</div>
-                    <div class="witem">C</div>
-                    <div class="witem">D</div>
-                    <div class="witem">E</div>
-                    <div class="witem">F</div>
-                </div>
+                </aside>
+            </div>  
+            <div class="wrap_wrap">
+                <div class="witem">A</div>
+                <div class="witem">B</div>
+                <div class="witem">C</div>
+                <div class="witem">D</div>
+                <div class="witem">E</div>
+                <div class="witem">F</div>
             </div>
+            <hr>
+            <h3>flex-wrap: wrap-reverse;</h3>
+            <p>
+                Define que irá ter quebra de linha invertida nos elementos flexíveis quando um dos elementos não puder ser mais compactado (quebra de linha para linha de cima).
+            </p>
             <div class="janela">
-                <h3>flex-wrap: wrap-reverse;</h3>
-                <p>
-                    Define que irá ter quebra de linha invertida nos elementos flexíveis quando um dos elementos não puder ser mais compactado (quebra de linha para linha de cima).
-                </p>
                 <aside>
                     <pre>
                         <code>
@@ -441,6 +466,8 @@
                 &lt;div class="item"&gt;B&lt;/div&gt;
                 &lt;div class="item"&gt;C&lt;/div&gt;
                 &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
             &lt;/div&gt;
         &lt;/body&gt;
         
@@ -458,15 +485,15 @@
         &lt;/style&gt;
                         </code>
                     </pre>
-                </aside>    
-                <div class="wrap_rwrap">
-                    <div class="witem">A</div>
-                    <div class="witem">B</div>
-                    <div class="witem">C</div>
-                    <div class="witem">D</div>
-                    <div class="witem">E</div>
-                    <div class="witem">F</div>
-                </div>
+                </aside>
+            </div>   
+            <div class="wrap_rwrap">
+                <div class="witem">A</div>
+                <div class="witem">B</div>
+                <div class="witem">C</div>
+                <div class="witem">D</div>
+                <div class="witem">E</div>
+                <div class="witem">F</div>
             </div>
         </article>
         <article class="seg">
@@ -474,11 +501,11 @@
             <p>
                 A propriedade CSS <strong>flex-flow</strong> é uma propriedade shorthand (uma mesma declaração inclui vários valores relacionados a mais de uma propriedade) que inclui <strong>flex-direction</strong> e <strong>flex-wrap</strong>. Segue todos os tipos de <strong>flex-flow</strong>:
             </p>
+            <h3>flex-flow: row nowrap; - padrão</h3>
+            <p>
+                Define a direção do eixo principal em linha, da esquerda para a direita + não permite quebra de linha nos elementos flexíveis.
+            </p>
             <div class="janela">
-                <h3>flex-flow: row nowrap; - padrão</h3>
-                <p>
-                    Define a direção do eixo principal em linha, da esquerda para a direita + não permite quebra de linha nos elementos flexíveis.
-                </p>
                 <aside>
                     <pre>
                         <code>
@@ -488,6 +515,8 @@
                 &lt;div class="item"&gt;B&lt;/div&gt;
                 &lt;div class="item"&gt;C&lt;/div&gt;
                 &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
             &lt;/div&gt;
         &lt;/body&gt;
         
@@ -505,21 +534,22 @@
         &lt;/style&gt;
                         </code>
                     </pre>
-                </aside>    
-                <div class="row_nowrap">
-                    <div class="witem">A</div>
-                    <div class="witem">B</div>
-                    <div class="witem">C</div>
-                    <div class="witem">D</div>
-                    <div class="witem">E</div>
-                    <div class="witem">F</div>
-                </div>
+                </aside>
             </div>
+            <div class="row_nowrap">
+                <div class="witem">A</div>
+                <div class="witem">B</div>
+                <div class="witem">C</div>
+                <div class="witem">D</div>
+                <div class="witem">E</div>
+                <div class="witem">F</div>
+            </div>
+            <hr>
+             <h3>flex-flow: row wrap;</h3>
+            <p>
+                Define a direção do eixo principal em linha, da esquerda para a direita + permite quebra de linha nos elementos flexíveis.
+            </p>
             <div class="janela">
-                <h3>flex-flow: row wrap;</h3>
-                <p>
-                    Define a direção do eixo principal em linha, da esquerda para a direita + permite quebra de linha nos elementos flexíveis.
-                </p>
                 <aside>
                     <pre>
                         <code>
@@ -529,6 +559,8 @@
                 &lt;div class="item"&gt;B&lt;/div&gt;
                 &lt;div class="item"&gt;C&lt;/div&gt;
                 &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
             &lt;/div&gt;
         &lt;/body&gt;
         
@@ -546,21 +578,22 @@
         &lt;/style&gt;
                         </code>
                     </pre>
-                </aside>    
-                <div class="row_wrap">
-                    <div class="witem">A</div>
-                    <div class="witem">B</div>
-                    <div class="witem">C</div>
-                    <div class="witem">D</div>
-                    <div class="witem">E</div>
-                    <div class="witem">F</div>
-                </div>
+                </aside> 
             </div>
+            <div class="row_wrap">
+                <div class="witem">A</div>
+                <div class="witem">B</div>
+                <div class="witem">C</div>
+                <div class="witem">D</div>
+                <div class="witem">E</div>
+                <div class="witem">F</div>
+            </div>
+            <hr>
+            <h3>flex-flow: row wrap-reverse;</h3>
+            <p>
+                Define a direção do eixo principal em linha, da esquerda para a direita + permite quebra de linha invertida nos elementos flexíveis.
+            </p>
             <div class="janela">
-                <h3>flex-flow: row wrap-reverse;</h3>
-                <p>
-                    Define a direção do eixo principal em linha, da esquerda para a direita + permite quebra de linha invertida nos elementos flexíveis.
-                </p>
                 <aside>
                     <pre>
                         <code>
@@ -570,6 +603,8 @@
                 &lt;div class="item"&gt;B&lt;/div&gt;
                 &lt;div class="item"&gt;C&lt;/div&gt;
                 &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
             &lt;/div&gt;
         &lt;/body&gt;
         
@@ -587,21 +622,22 @@
         &lt;/style&gt;
                         </code>
                     </pre>
-                </aside>    
-                <div class="row_rwrap">
-                    <div class="witem">A</div>
-                    <div class="witem">B</div>
-                    <div class="witem">C</div>
-                    <div class="witem">D</div>
-                    <div class="witem">E</div>
-                    <div class="witem">F</div>
-                </div>
+                </aside>  
+            </div>      
+            <div class="row_rwrap">
+                <div class="witem">A</div>
+                <div class="witem">B</div>
+                <div class="witem">C</div>
+                <div class="witem">D</div>
+                <div class="witem">E</div>
+                <div class="witem">F</div>
             </div>
+            <hr>
+            <h3>flex-flow: row-reverse nowrap;</h3>
+            <p>
+                Define a direção do eixo principal em linha invertida, da direita para a esquerda + não permite quebra de linha nos elementos flexíveis.
+            </p>
             <div class="janela">
-                <h3>flex-flow: row-reverse nowrap;</h3>
-                <p>
-                    Define a direção do eixo principal em linha invertida, da direita para a esquerda + não permite quebra de linha nos elementos flexíveis.
-                </p>
                 <aside>
                     <pre>
                         <code>
@@ -611,6 +647,8 @@
                 &lt;div class="item"&gt;B&lt;/div&gt;
                 &lt;div class="item"&gt;C&lt;/div&gt;
                 &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
             &lt;/div&gt;
         &lt;/body&gt;
         
@@ -628,21 +666,22 @@
         &lt;/style&gt;
                         </code>
                     </pre>
-                </aside>    
-                <div class="rrow_nowrap">
-                    <div class="witem">A</div>
-                    <div class="witem">B</div>
-                    <div class="witem">C</div>
-                    <div class="witem">D</div>
-                    <div class="witem">E</div>
-                    <div class="witem">F</div>
-                </div>
+                </aside>
+            </div>        
+            <div class="rrow_nowrap">
+                <div class="witem">A</div>
+                <div class="witem">B</div>
+                <div class="witem">C</div>
+                <div class="witem">D</div>
+                <div class="witem">E</div>
+                <div class="witem">F</div>
             </div>
+            <hr>
+            <h3>flex-flow: row-reverse wrap;</h3>
+            <p>
+                Define a direção do eixo principal em linha invertida, da direita para a esquerda + permite quebra de linha nos elementos flexíveis.
+            </p>
             <div class="janela">
-                <h3>flex-flow: row-reverse wrap;</h3>
-                <p>
-                    Define a direção do eixo principal em linha invertida, da direita para a esquerda + permite quebra de linha nos elementos flexíveis.
-                </p>
                 <aside>
                     <pre>
                         <code>
@@ -652,6 +691,8 @@
                 &lt;div class="item"&gt;B&lt;/div&gt;
                 &lt;div class="item"&gt;C&lt;/div&gt;
                 &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
             &lt;/div&gt;
         &lt;/body&gt;
         
@@ -669,21 +710,22 @@
         &lt;/style&gt;
                         </code>
                     </pre>
-                </aside>    
-                <div class="rrow_wrap">
-                    <div class="witem">A</div>
-                    <div class="witem">B</div>
-                    <div class="witem">C</div>
-                    <div class="witem">D</div>
-                    <div class="witem">E</div>
-                    <div class="witem">F</div>
-                </div>
+                </aside>
+            </div>        
+            <div class="rrow_wrap">
+                <div class="witem">A</div>
+                <div class="witem">B</div>
+                <div class="witem">C</div>
+                <div class="witem">D</div>
+                <div class="witem">E</div>
+                <div class="witem">F</div>
             </div>
+            <hr>
+            <h3>flex-flow: row-reverse wrap-reverse;</h3>
+            <p>
+                Define a direção do eixo principal em linha invertida, da direita para a esquerda + permite quebra de linha invertida nos elementos flexíveis.
+            </p>
             <div class="janela">
-                <h3>flex-flow: row-reverse wrap-reverse;</h3>
-                <p>
-                    Define a direção do eixo principal em linha invertida, da direita para a esquerda + permite quebra de linha invertida nos elementos flexíveis.
-                </p>
                 <aside>
                     <pre>
                         <code>
@@ -693,6 +735,8 @@
                 &lt;div class="item"&gt;B&lt;/div&gt;
                 &lt;div class="item"&gt;C&lt;/div&gt;
                 &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
             &lt;/div&gt;
         &lt;/body&gt;
         
@@ -710,21 +754,21 @@
         &lt;/style&gt;
                         </code>
                     </pre>
-                </aside>    
-                <div class="rrow_rwrap">
-                    <div class="witem">A</div>
-                    <div class="witem">B</div>
-                    <div class="witem">C</div>
-                    <div class="witem">D</div>
-                    <div class="witem">E</div>
-                    <div class="witem">F</div>
-                </div>
+                </aside>  
+            </div>      
+            <div class="rrow_rwrap">
+                <div class="witem">A</div>
+                <div class="witem">B</div>
+                <div class="witem">C</div>
+                <div class="witem">D</div>
+                <div class="witem">E</div>
+                <div class="witem">F</div>
             </div>
+            <h3>flex-flow: column nowrap;</h3>
+            <p>
+                Define a direção do eixo principal em coluna, de cima para baixo + não permite quebra de linha nos elementos flexíveis.
+            </p>
             <div class="janela">
-                <h3>flex-flow: column nowrap;</h3>
-                <p>
-                    Define a direção do eixo principal em coluna, de cima para baixo + não permite quebra de linha nos elementos flexíveis.
-                </p>
                 <aside>
                     <pre>
                         <code>
@@ -734,6 +778,8 @@
                 &lt;div class="item"&gt;B&lt;/div&gt;
                 &lt;div class="item"&gt;C&lt;/div&gt;
                 &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
             &lt;/div&gt;
         &lt;/body&gt;
         
@@ -750,21 +796,22 @@
         &lt;/style&gt;
                         </code>
                     </pre>
-                </aside>    
-                <div class="column_nowrap">
-                    <div class="item">A</div>
-                    <div class="item">B</div>
-                    <div class="item">C</div>
-                    <div class="item">D</div>
-                    <div class="item">E</div>
-                    <div class="item">F</div>
-                </div>
+                </aside> 
+            </div>       
+            <div class="column_nowrap">
+                <div class="item">A</div>
+                <div class="item">B</div>
+                <div class="item">C</div>
+                <div class="item">D</div>
+                <div class="item">E</div>
+                <div class="item">F</div>
             </div>
+            <hr>
+            <h3>flex-flow: column wrap;</h3>
+            <p>
+                Define a direção do eixo principal em coluna, de cima para baixo + permite quebra de linha nos elementos flexíveis.
+            </p>
             <div class="janela">
-                <h3>flex-flow: column wrap;</h3>
-                <p>
-                    Define a direção do eixo principal em coluna, de cima para baixo + permite quebra de linha nos elementos flexíveis.
-                </p>
                 <aside>
                     <pre>
                         <code>
@@ -774,6 +821,8 @@
                 &lt;div class="item"&gt;B&lt;/div&gt;
                 &lt;div class="item"&gt;C&lt;/div&gt;
                 &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
             &lt;/div&gt;
         &lt;/body&gt;
         
@@ -791,21 +840,22 @@
         &lt;/style&gt;
                         </code>
                     </pre>
-                </aside>    
-                <div class="column_wrap">
-                    <div class="item">A</div>
-                    <div class="item">B</div>
-                    <div class="item">C</div>
-                    <div class="item">D</div>
-                    <div class="item">E</div>
-                    <div class="item">F</div>
-                </div>
+                </aside> 
+            </div>       
+            <div class="column_wrap">
+                <div class="item">A</div>
+                <div class="item">B</div>
+                <div class="item">C</div>
+                <div class="item">D</div>
+                <div class="item">E</div>
+                <div class="item">F</div>
             </div>
+            <hr>
+            <h3>flex-flow: column wrap-reverse;</h3>
+            <p>
+                Define a direção do eixo principal em coluna, de cima para baixo + permite quebra de linha invertida nos elementos flexíveis.
+            </p>
             <div class="janela">
-                <h3>flex-flow: column wrap-reverse;</h3>
-                <p>
-                    Define a direção do eixo principal em coluna, de cima para baixo + permite quebra de linha invertida nos elementos flexíveis.
-                </p>
                 <aside>
                     <pre>
                         <code>
@@ -815,6 +865,8 @@
                 &lt;div class="item"&gt;B&lt;/div&gt;
                 &lt;div class="item"&gt;C&lt;/div&gt;
                 &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
             &lt;/div&gt;
         &lt;/body&gt;
         
@@ -832,137 +884,146 @@
         &lt;/style&gt;
                         </code>
                     </pre>
-                </aside>    
-                <div class="column_rwrap">
-                    <div class="item">A</div>
-                    <div class="item">B</div>
-                    <div class="item">C</div>
-                    <div class="item">D</div>
-                    <div class="item">E</div>
-                    <div class="item">F</div>
-                </div>
+                </aside> 
+            </div>       
+            <div class="column_rwrap">
+                <div class="item">A</div>
+                <div class="item">B</div>
+                <div class="item">C</div>
+                <div class="item">D</div>
+                <div class="item">E</div>
+                <div class="item">F</div>
             </div>
+            <hr>
+            <h3>flex-flow: column-reverse nowrap;</h3>
+            <p>
+                Define a direção do eixo principal em coluna invertida, de baixo para cima + não permite quebra de linha nos elementos flexíveis.
+            </p>
             <div class="janela">
-                <h3>flex-flow: column-reverse nowrap;</h3>
-                <p>
-                    Define a direção do eixo principal em coluna invertida, de baixo para cima + não permite quebra de linha nos elementos flexíveis.
-                </p>
                 <aside>
                     <pre>
                         <code>
-                &lt;body&gt;
-                    &lt;div class="container"&gt;
-            &lt;div class="item"&gt;A&lt;/div&gt;
-            &lt;div class="item"&gt;B&lt;/div&gt;
-            &lt;div class="item"&gt;C&lt;/div&gt;
-            &lt;div class="item"&gt;D&lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/body&gt;
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
                 
-                &lt;style&gt;
-                    div.container {
-            background-color: lightsalmon;
-            <mark>display: flex;</mark>
-            <mark>flex-flow: column-reverse nowrap;</mark>
-                    }
-                    div.item {
-            background-color: darkslategrey;
-            border: 1px solid black;
-                    }
-                &lt;/style&gt;
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: column-reverse nowrap;</mark>
+            }
+            div.item {
+                background-color: darkslategrey;
+                border: 1px solid black;
+            }
+        &lt;/style&gt;
                         </code>
                     </pre>
                 </aside>
-                <div class="rcolumn_nowrap">
-                    <div class="item">A</div>
-                    <div class="item">B</div>
-                    <div class="item">C</div>
-                    <div class="item">D</div>
-                    <div class="item">E</div>
-                    <div class="item">F</div>
-                </div>
+            </div>    
+            <div class="rcolumn_nowrap">
+                <div class="item">A</div>
+                <div class="item">B</div>
+                <div class="item">C</div>
+                <div class="item">D</div>
+                <div class="item">E</div>
+                <div class="item">F</div>
             </div>
+            <hr>
+            <h3>flex-flow: column-reverse wrap;</h3>
+            <p>
+                Define a direção do eixo principal em coluna invertida, de baixo para cima + permite quebra de linha nos elementos flexíveis.
+            </p>
             <div class="janela">
-                <h3>flex-flow: column-reverse wrap;</h3>
-                <p>
-                    Define a direção do eixo principal em coluna invertida, de baixo para cima + permite quebra de linha nos elementos flexíveis.
-                </p>
                 <aside>
                     <pre>
                         <code>
-                &lt;body&gt;
-                    &lt;div class="container"&gt;
-            &lt;div class="item"&gt;A&lt;/div&gt;
-            &lt;div class="item"&gt;B&lt;/div&gt;
-            &lt;div class="item"&gt;C&lt;/div&gt;
-            &lt;div class="item"&gt;D&lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/body&gt;
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
                 
-                &lt;style&gt;
-                    div.container {
-            background-color: lightsalmon;
-            <mark>display: flex;</mark>
-            <mark>flex-flow: column-reverse wrap;</mark>
-            height: 80px;
-                    }
-                    div.item {
-            background-color: darkslategrey;
-            border: 1px solid black;
-                    }
-                &lt;/style&gt;
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: column-reverse wrap;</mark>
+                height: 80px;
+            }
+            div.item {
+                background-color: darkslategrey;
+                border: 1px solid black;
+            }
+        &lt;/style&gt;
                         </code>
                     </pre>
                 </aside>
-                <div class="rcolumn_wrap">
-                    <div class="item">A</div>
-                    <div class="item">B</div>
-                    <div class="item">C</div>
-                    <div class="item">D</div>
-                    <div class="item">E</div>
-                    <div class="item">F</div>
-                </div>
+            </div>    
+            <div class="rcolumn_wrap">
+                <div class="item">A</div>
+                <div class="item">B</div>
+                <div class="item">C</div>
+                <div class="item">D</div>
+                <div class="item">E</div>
+                <div class="item">F</div>
             </div>
+            <hr>
+            <h3>flex-flow: column-reverse wrap-reverse;</h3>
+            <p>
+                Define a direção do eixo principal em coluna invertida, de baixo para cima + permite quebra de linha invertida nos elementos flexíveis.
+            </p>
             <div class="janela">
-                <h3>flex-flow: column-reverse wrap-reverse;</h3>
-                <p>
-                    Define a direção do eixo principal em coluna invertida, de baixo para cima + permite quebra de linha invertida nos elementos flexíveis.
-                </p>
                 <aside>
                     <pre>
                         <code>
-                &lt;body&gt;
-                    &lt;div class="container"&gt;
+    &lt;body&gt;
+        &lt;div class="container"&gt;
             &lt;div class="item"&gt;A&lt;/div&gt;
             &lt;div class="item"&gt;B&lt;/div&gt;
             &lt;div class="item"&gt;C&lt;/div&gt;
             &lt;div class="item"&gt;D&lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/body&gt;
-                
-                &lt;style&gt;
-                    div.container {
+            &lt;div class="item"&gt;E&lt;/div&gt;
+            &lt;div class="item"&gt;F&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+            
+    &lt;style&gt;
+        div.container {
             background-color: lightsalmon;
             <mark>display: flex;</mark>
             <mark>flex-flow: column-reverse wrap-reverse;</mark>
             height: 40px;
-                    }
-                    div.item {
+        }
+        div.item {
             background-color: darkslategrey;
             border: 1px solid black;
-                    }
-                &lt;/style&gt;
+        }
+    &lt;/style&gt;
                         </code>
                     </pre>
                 </aside>
-                <div class="rcolumn_rwrap">
-                    <div class="item">A</div>
-                    <div class="item">B</div>
-                    <div class="item">C</div>
-                    <div class="item">D</div>
-                    <div class="item">E</div>
-                    <div class="item">F</div>
-                </div>
+            </div>    
+            <div class="rcolumn_rwrap">
+                <div class="item">A</div>
+                <div class="item">B</div>
+                <div class="item">C</div>
+                <div class="item">D</div>
+                <div class="item">E</div>
+                <div class="item">F</div>
             </div>
             <p>
                 Obs: Para fazer quebra de linha em colunas, adicionar um valor <strong>height</strong> no elemento pai.

@@ -22,4 +22,25 @@
         background-size: contain;
         background-attachment: fixed;
     }
+
+    div.janela {
+        display: flex;
+        justify-content: center;
+    }
+
+    div.janela > img {
+        flex: 0 1 200px;
+        align-self: center;
+    }
+
+    div.janela > aside {
+        flex: 0 0 400px;
+        align-self: center;
+        margin: 20px;
+        margin-right: 50px; 
+    }
+
+    img.vertical {
+        height: 350px;
+    }
 }
