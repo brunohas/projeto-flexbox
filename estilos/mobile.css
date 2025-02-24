@@ -106,6 +106,15 @@ aside {
     margin-bottom: 20px;
 }
 
+aside.landscape {
+    display: block;
+}
+
+aside.portrait {
+    width: 85vw;
+    display: none;
+}
+
 div.janela {
     flex: auto;
 
@@ -140,6 +149,14 @@ ul.dois {
     columns: 2;
     line-height: 30px;
     padding-left: 10px;
+}
+
+p.indicacao1 {
+    text-align: center;
+} 
+
+p.indicacao2 {
+    display: none;
 }
 
 footer {

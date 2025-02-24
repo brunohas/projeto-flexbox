@@ -57,9 +57,144 @@
             margin: 10px 0px;
         }
 
+        div.align-items_stretch {
+            background-color: lightsalmon;
+            height: 70px;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: stretch;
+            margin: 10px 0px;
+        }
+
+        div.align-items_start {
+            background-color: lightsalmon;
+            height: 70px;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: flex-start;
+            margin: 10px 0px;
+        }
+
+        div.align-items_end {
+            background-color: lightsalmon;
+            height: 70px;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: flex-end;
+            margin: 10px 0px;
+        }
+
+        div.align-items_center {
+            background-color: lightsalmon;
+            height: 70px;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            margin: 10px 0px;
+        }
+
+        div.align-content_stretch {
+            background-color: lightsalmon;
+            height: 70px;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: stretch;
+            margin: 10px 0px;
+        }
+
+        div.align-content_start {
+            background-color: lightsalmon;
+            height: 70px;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: flex-start;
+            margin: 10px 0px;
+        }
+
+        div.align-content_end {
+            background-color: lightsalmon;
+            height: 70px;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: flex-end;
+            margin: 10px 0px;
+        }
+
+        div.align-content_center {
+            background-color: lightsalmon;
+            height: 70px;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: center;
+            margin: 10px 0px;
+        }
+
+        div.align-content_bet {
+            background-color: lightsalmon;
+            height: 70px;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: space-between;
+            margin: 10px 0px;
+        }
+
+        div.align-content_even {
+            background-color: lightsalmon;
+            height: 70px;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: space-evenly;
+            margin: 10px 0px;
+        }
+
+        div.align-content_around {
+            background-color: lightsalmon;
+            height: 70px;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: space-around;
+            margin: 10px 0px;
+        }
+
+        div.align-self {
+            background-color: lightsalmon;
+            height: 100px;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            margin: 10px 0px;
+        }
+
+        div#a1 {
+            align-self: auto;
+        }
+
+        div#a2 {
+            align-self: flex-start;
+        }
+
+        div#a3 {
+            align-self: flex-end;
+        }
+
+        div#a4 {
+            align-self: center;
+        }
+
+        div#a5 {
+            align-self: stretch;
+        }
+
         div.item {
             background-color: lightslategray;
             border: 1px solid black;
+        }
+
+        div.aitem {
+            background-color: lightslategray;
+            border: 1px solid black;
+            width: 200px;
+            text-align: center;
         }
     </style>
 </head>
@@ -70,7 +205,6 @@
         <menu id="itens">
             <a href="../index.html" rel="prev">Início</a>
             <a href="../paginas/direcao_quebra.html" rel="next">Direção e Quebra de linha</a>
-            <a href="#">Alinhamento do item</a>
             <a href="#">Expansão e Redução dos itens</a>
         </menu>
     </header>
@@ -361,6 +495,726 @@
                 Agora um exemplo desses alinhamentos com um flex-direction: column;
             </h3>
             <img class="peq" src="../imagens/column_justify-content.png" alt="Modelo Flexbox">
+        </article>
+        <article class="seg">
+            <h2>Alinhamento eixo transversal (cross-axis)</h2>
+            <p>
+                Para fazer o alinhamento em relação ao eixo transversal (<strong>cross-axis</strong>) em uma <strong>flex-box</strong> usamos o atributo <strong>align-items</strong>. Se atentar a direção em que o eixo está (<strong>flex-direction</strong>).
+            </p>
+            <h3>align-items: stretch; - padrão</h3>
+            <p>
+                Estica o elemento para que caiba no contêiner.
+            </p>
+            <div class="janela">
+                <img class="primeira" src="../imagens/align-items_padrao.png" alt="Modelo Flexbox">
+                <p class="indicacao1">
+                    &darr;
+                </p>
+                <p class="indicacao2">
+                    &rarr;
+                </p>
+                <img src="../imagens/align-items_stretch.png" alt="Modelo de Flexbox">
+                <aside>
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                height: 70px;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row nowrap;</mark>
+                <mark>align-items: stretch;</mark>
+            }
+            div.item {
+                background-color: darkslategrey;
+                border: 1px solid black;   
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+            </div>
+        <div class="align-items_stretch">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+        </div>
+        <hr>
+        <h3>align-items: flex-start;</h3>
+        <p>
+            Gruda os elementos no início do eixo transversal (<strong>cross-start</strong>) e caso exista um espaço livre, fica grudado no final do eixo transversal (<strong>cross-end</strong>).
+        </p>
+        <div class="janela">
+            <img class="primeira" src="../imagens/align-items_padrao.png" alt="Modelo Flexbox">
+            <p class="indicacao1">
+                &darr;
+            </p>
+            <p class="indicacao2">
+                &rarr;
+            </p>
+            <img src="../imagens/align-items_start.png" alt="Modelo de Flexbox">
+            <aside>
+                <pre>
+                    <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                height: 70px;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row nowrap;</mark>
+                <mark>align-items: flex-start;</mark>
+            }
+            div.item {
+                background-color: darkslategrey;
+                border: 1px solid black;   
+            }
+        &lt;/style&gt;
+                    </code>
+                </pre>
+            </aside>
+        </div>
+        <div class="align-items_start">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+        </div>
+        <hr>
+        <h3>align-items: flex-end;</h3>
+        <p>
+            Gruda os elementos no final do eixo transversal (<strong>cross-end</strong>) e caso exista um espaço livre, fica grudado no início do eixo transversal (<strong>cross-start</strong>).
+        </p>
+        <div class="janela">
+            <img class="primeira" src="../imagens/align-items_padrao.png" alt="Modelo Flexbox">
+            <p class="indicacao1">
+                &darr;
+            </p>
+            <p class="indicacao2">
+                &rarr;
+            </p>
+            <img src="../imagens/align-items_end.png" alt="Modelo de Flexbox">
+            <aside>
+                <pre>
+                    <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                height: 70px;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row nowrap;</mark>
+                <mark>align-items: flex-end;</mark>
+            }
+            div.item {
+                background-color: darkslategrey;
+                border: 1px solid black;   
+            }
+        &lt;/style&gt;
+                    </code>
+                </pre>
+            </aside>
+        </div>
+        <div class="align-items_end">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+        </div>
+        <hr>
+        <h3>align-items: center;</h3>
+        <p>
+            Calcula o centro do contêiner, e coloca todos os elementos juntos no centro do eixo transversal (<strong>cross-axis</strong>), e os espaços em branco são distribuídos de forma igual nos lados (se atentar a direção <strong>flex-direction</strong>).
+        </p>
+        <div class="janela">
+            <img class="primeira" src="../imagens/align-items_padrao.png" alt="Modelo Flexbox">
+            <p class="indicacao1">
+                &darr;
+            </p>
+            <p class="indicacao2">
+                &rarr;
+            </p>
+            <img src="../imagens/align-items_center.png" alt="Modelo de Flexbox">
+            <aside>
+                <pre>
+                    <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                height: 70px;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row nowrap;</mark>
+                <mark>align-items: center;</mark>
+            }
+            div.item {
+                background-color: darkslategrey;
+                border: 1px solid black;   
+            }
+        &lt;/style&gt;
+                    </code>
+                </pre>
+            </aside>
+        </div>
+        <div class="align-items_center">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+        </div>
+        </article>
+        <article class="seg">
+            <h2>Organização das linhas</h2>
+            <p>
+                Para fazer a organização das linhas de um contêiner flexível, utilizamos o atributo <strong>align-content</strong>, só pode ser utilizado quando tiver quebra de linha (<strong>flex-wrap: wrap;</strong> ou <strong>flew-wrap: wrap-reverse;</strong>).
+            </p>
+            <h3>align-content: stretch; - padrão</h3>
+            <p>
+                Distribui as linhas uniformemente ao longo do eixo transversal (<strong>cross-axis</strong>).
+            </p>
+            <div class="janela">
+                <img class="primeira" src="../imagens/align-content_padrao.png" alt="Modelo Flexbox">
+                <p class="indicacao1">
+                    &darr;
+                </p>
+                <p class="indicacao2">
+                    &rarr;
+                </p>
+                <img src="../imagens/align-content_stretch.png" alt="Modelo de Flexbox">
+                <aside>
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                height: 70px;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row wrap;</mark>
+                <mark>align-content: stretch;</mark>
+            }
+            div.item {
+                background-color: darkslategrey;
+                border: 1px solid black;
+                width: 200px;
+                text-align: center;   
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+            </div>
+            <div class="align-content_stretch">
+                <div class="aitem">A</div>
+                <div class="aitem">B</div>
+                <div class="aitem">C</div>
+                <div class="aitem">D</div>
+                <div class="aitem">E</div>
+                <div class="aitem">F</div>
+            </div>
+            <hr>
+            <h3>align-content: flex-start;</h3>
+            <p>
+                Distribui as linhas a partir do início do eixo transversal (<strong>cross-start</strong>).
+            </p>
+            <div class="janela">
+                <img class="primeira" src="../imagens/align-content_padrao.png" alt="Modelo Flexbox">
+                <p class="indicacao1">
+                    &darr;
+                </p>
+                <p class="indicacao2">
+                    &rarr;
+                </p>
+                <img src="../imagens/align-content_start.png" alt="Modelo de Flexbox">
+                <aside>
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                height: 70px;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row wrap;</mark>
+                <mark>align-content: flex-start;</mark>
+            }
+            div.item {
+                background-color: darkslategrey;
+                border: 1px solid black;
+                width: 200px;
+                text-align: center;   
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+            </div>
+            <div class="align-content_start">
+                <div class="aitem">A</div>
+                <div class="aitem">B</div>
+                <div class="aitem">C</div>
+                <div class="aitem">D</div>
+                <div class="aitem">E</div>
+                <div class="aitem">F</div>
+            </div>
+            <hr>
+            <h3>align-content: flex-end;</h3>
+            <p>
+                Distribui as linhas a partir do final do eixo transversal (<strong>cross-end</strong>).
+            </p>
+            <div class="janela">
+                <img class="primeira" src="../imagens/align-content_padrao.png" alt="Modelo Flexbox">
+                <p class="indicacao1">
+                    &darr;
+                </p>
+                <p class="indicacao2">
+                    &rarr;
+                </p>
+                <img src="../imagens/align-content_end.png" alt="Modelo de Flexbox">
+                <aside>
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                height: 70px;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row wrap;</mark>
+                <mark>align-content: flex-end;</mark>
+            }
+            div.item {
+                background-color: darkslategrey;
+                border: 1px solid black;
+                width: 200px;
+                text-align: center;   
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+            </div>
+            <div class="align-content_end">
+                <div class="aitem">A</div>
+                <div class="aitem">B</div>
+                <div class="aitem">C</div>
+                <div class="aitem">D</div>
+                <div class="aitem">E</div>
+                <div class="aitem">F</div>
+            </div>
+            <hr>
+            <h3>align-content: center;</h3>
+            <p>
+                Mantém as linhas no centro do eixo transversal (<strong>cross-axis</strong>).
+            </p>
+            <div class="janela">
+                <img class="primeira" src="../imagens/align-content_padrao.png" alt="Modelo Flexbox">
+                <p class="indicacao1">
+                    &darr;
+                </p>
+                <p class="indicacao2">
+                    &rarr;
+                </p>
+                <img src="../imagens/align-content_center.png" alt="Modelo de Flexbox">
+                <aside>
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                height: 70px;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row wrap;</mark>
+                <mark>align-content: center;</mark>
+            }
+            div.item {
+                background-color: darkslategrey;
+                border: 1px solid black;
+                width: 200px;
+                text-align: center;   
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+            </div>
+            <div class="align-content_center">
+                <div class="aitem">A</div>
+                <div class="aitem">B</div>
+                <div class="aitem">C</div>
+                <div class="aitem">D</div>
+                <div class="aitem">E</div>
+                <div class="aitem">F</div>
+            </div>
+            <hr>
+            <h3>align-content: space-between;</h3>
+            <p>
+                Distribui as linhas uniformemente entre o início (<strong>cross-start</strong>) e o fim do eixo transversal (<strong>cross-end</strong>).
+            </p>
+            <div class="janela">
+                <img class="primeira" src="../imagens/align-content_padrao.png" alt="Modelo Flexbox">
+                <p class="indicacao1">
+                    &darr;
+                </p>
+                <p class="indicacao2">
+                    &rarr;
+                </p>
+                <img src="../imagens/align-content_bet.png" alt="Modelo de Flexbox">
+                <aside>
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                height: 70px;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row wrap;</mark>
+                <mark>align-content: space-between;</mark>
+            }
+            div.item {
+                background-color: darkslategrey;
+                border: 1px solid black;
+                width: 200px;
+                text-align: center;   
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+            </div>
+            <div class="align-content_bet">
+                <div class="aitem">A</div>
+                <div class="aitem">B</div>
+                <div class="aitem">C</div>
+                <div class="aitem">D</div>
+                <div class="aitem">E</div>
+                <div class="aitem">F</div>
+            </div>
+            <hr>
+            <h3>align-content: space-evenly;</h3>
+            <p>
+                Distribui as linhas igualmente com o mesmo espaçamento entre elas.
+            </p>
+            <div class="janela">
+                <img class="primeira" src="../imagens/align-content_padrao.png" alt="Modelo Flexbox">
+                <p class="indicacao1">
+                    &darr;
+                </p>
+                <p class="indicacao2">
+                    &rarr;
+                </p>
+                <img src="../imagens/align-content_even.png" alt="Modelo de Flexbox">
+                <aside>
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                height: 70px;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row wrap;</mark>
+                <mark>align-content: space-evenly;</mark>
+            }
+            div.item {
+                background-color: darkslategrey;
+                border: 1px solid black;
+                width: 200px;
+                text-align: center;   
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+            </div>
+            <div class="align-content_even">
+                <div class="aitem">A</div>
+                <div class="aitem">B</div>
+                <div class="aitem">C</div>
+                <div class="aitem">D</div>
+                <div class="aitem">E</div>
+                <div class="aitem">F</div>
+            </div>
+            <hr>
+            <h3>align-content: space-around;</h3>
+            <p>
+                Distribui as linhas uniformemente ao longo do eixo transversal, atribuindo margens iguais dos lados.
+            </p>
+            <div class="janela">
+                <img class="primeira" src="../imagens/align-content_padrao.png" alt="Modelo Flexbox">
+                <p class="indicacao1">
+                    &darr;
+                </p>
+                <p class="indicacao2">
+                    &rarr;
+                </p>
+                <img src="../imagens/align-content_aro.png" alt="Modelo de Flexbox">
+                <aside>
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                height: 70px;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row wrap;</mark>
+                <mark>align-content: space-around;</mark>
+            }
+            div.item {
+                background-color: darkslategrey;
+                border: 1px solid black;
+                width: 200px;
+                text-align: center;   
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+            </div>
+            <div class="align-content_around">
+                <div class="aitem">A</div>
+                <div class="aitem">B</div>
+                <div class="aitem">C</div>
+                <div class="aitem">D</div>
+                <div class="aitem">E</div>
+                <div class="aitem">F</div>
+            </div>
+        </article>
+        <article class="seg">
+            <h2>Alinhamento dos itens</h2>
+            <p>
+                Para fazer o alinhamento de um item individual dentro de uma <strong>flexbox</strong>, utilizamos o atributo <strong>align-self</strong>, funciona diretamente no eixo transversal (<strong>cross-axis</strong>).
+            </p>
+            <p style="text-align: center;">
+                - Exemplo dos align-self -
+            </p>
+            <img class="peq" src="../imagens/align-self.png" alt="Modelo Flexbox">
+            <h3>align-self: auto; - padrão</h3>
+            <p>
+                Herda a característica de alinhamento vertical de seu pai, seja ele o <strong>align-content</strong> ou <strong>align-items</strong>.
+            </p>
+            <h3>align-self: flex-auto;</h3>
+            <p>
+                Faz o alinhamento grudado o elemento no início do eixo transversal (<Strong>cross-start</Strong>).
+            </p>
+            <h3>align-self: flex-end;</h3>
+            <p>
+                Faz o alinhamento grudado o elemento no final do eixo transversal (<strong>cross-end</strong>).
+            </p>
+            <h3>align-self: center;</h3>
+            <p>
+                Calcula o meio entre o <strong>cross-start</strong> e o <strong>cross-end</strong> e deixa os elementos no centro.
+            </p>
+            <h3>align-self: stretch;</h3>
+            <p>
+                Estica o elemento para que caiba no espaço inteiro do contêiner.
+            </p>
+            <div class="janela">
+                <br>
+                <aside class="landscape">
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item" id="a1"&gt;auto&lt;/div&gt;
+                &lt;div class="item" id="a2"&gt;start&lt;/div&gt;
+                &lt;div class="item" id="a3"&gt;end&lt;/div&gt;
+                &lt;div class="item" id="a4"&gt;center&lt;/div&gt;
+                &lt;div class="item" id="a5"&gt;stretch&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                height: 100px;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row nowrap;</mark>
+                <mark>align-items: center;</mark>
+            }
+            div.item {
+                background-color: darkslategrey;
+                border: 1px solid black;
+                width: 200px;
+                text-align: center;   
+            }
+            div#a1 {
+                <mark>align-self: auto;</mark>
+            } 
+            div#a2 {
+                <mark>align-self: flex-start;</mark>
+            }
+            div#a3 {
+                <mark>align-self: flex-end;</mark>
+            }
+            div#a4 {
+                <mark>align-self: center;</mark>
+            }
+            div#a5 {
+                <mark>align-self: stretch;</mark>
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+                <aside class="portrait">
+                    <pre>
+                        <code>
+                                                    |    div.container {
+    &lt;body&gt;                                          |        background-color: lightsalmon;
+        &lt;div class="container"&gt;                     |        height: 100px;
+            &lt;div class="item" id="a1"&gt;auto&lt;/div&gt;    |        <mark>display: flex;</mark>
+            &lt;div class="item" id="a2"&gt;start&lt;/div&gt;   |        <mark>flex-flow: row nowrap;</mark>
+            &lt;div class="item" id="a3"&gt;end&lt;/div&gt;     |        <mark>align-items: center;</mark>
+            &lt;div class="item" id="a4"&gt;center&lt;/div&gt;  |    }    
+            &lt;div class="item" id="a5"&gt;stretch&lt;/div&gt; |    div.item {
+        &lt;/div&gt;                                      |        background-color: lightslategray;
+    &lt;/body&gt;                                         |        border: 1px solid black;
+                                                    |        width: 200px;
+                                                    |        text-align: center;
+                                                    |    }
+
+    div#a1 {              | div#a2 {                    | div#a3 {
+        <mark>align-self: auto;</mark> |     <mark>aling-self: flex-start;</mark> |     <mark>align-self: flex-end;</mark>
+    }                     | }                           | }
+                div#a4 {                | div#a5 {
+                    <mark>align-self: center;</mark> |     <mark>align-self: stretch;</mark>
+                }                       | }
+                        </code>
+                    </pre>
+        
+                </aside>
+            </div>
+            <div class="align-self">
+                <div id="a1" class="aitem">auto</div>
+                <div id="a2" class="aitem">start</div>
+                <div id="a3" class="aitem">end</div>
+                <div id="a4" class="aitem">center</div>
+                <div id="a5" class="aitem">stretch</div>
+            </div>
         </article>
     </main>
     <footer>

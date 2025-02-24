@@ -25,22 +25,42 @@
 
     div.janela {
         display: flex;
+        flex-flow: row wrap;
         justify-content: center;
     }
 
     div.janela > img {
-        flex: 0 1 200px;
-        align-self: center;
+        align-self: flex-end;
     }
 
     div.janela > aside {
         flex: 0 0 400px;
         align-self: center;
         margin: 20px;
-        margin-right: 50px; 
     }
 
     img.vertical {
         height: 350px;
+    }
+
+    p.indicacao1 {
+        display: none;
+    }
+
+    p.indicacao2 {
+        display: block;
+        align-self: center;
+    }
+
+    img.indicacao::after {
+        content: 'sdfkjnsdklfnlks';
+    }
+
+    aside.landscape {
+        display: none;
+    }
+    
+    aside.portrait {
+        display: block;
     }
 }
