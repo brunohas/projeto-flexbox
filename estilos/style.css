@@ -23,6 +23,15 @@
         background-attachment: fixed;
     }
 
+    article {
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    article.seg {
+        border-radius: 10px;
+    }
+
     div.janela {
         display: flex;
         flex-flow: row wrap;
