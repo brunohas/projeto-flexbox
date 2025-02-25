@@ -100,9 +100,10 @@ h3 {
 
 aside {
     border: 1px dashed black;
-    width: 400px;
+    width: 380px;
     display: block;
     margin: auto;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
