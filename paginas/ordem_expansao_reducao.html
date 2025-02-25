@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagens/icon.png" type="image/x-icon">
+    <title>Expansão e Redução dos itens</title>
+    <link rel="stylesheet" href="../estilos/mobile.css">
+    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <style>
+        div.container1 {
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row nowrap;
+            margin: 10px 0px;
+        }
+
+        div.container2 {
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row wrap;
+            margin: 10px 0px;
+        }
+
+        div.item {
+            background-color: lightslategray;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+        div.basis {
+            background-color: lightslategray;
+            border: 1px solid black;
+            flex-basis: auto;
+        }
+
+        div#a1 {
+            order: 0;
+        }
+
+        div#a2 {
+            order: -2;
+        }
+
+        div#a3 {
+            order: 4;
+        }
+
+        div#a4 {
+            order: 8;
+        }
+
+        div#a5 {
+            order: -4;
+        }
+
+        div#a6 {
+            order: 2;
+        }
+
+        div.grow0 {
+            background-color: lightslategray;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+            flex-grow: 0;
+        }
+
+        div.grow1 {
+            background-color: lightslategray;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+            flex-grow: 1;
+        }
+
+        div.shrink1 {
+            background-color: lightslategray;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+            flex-shrink: 1;
+        }
+
+        div.shrink0 {
+            background-color: lightslategray;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+            flex-shrink: 0;
+        }
+
+        div.flex1 {
+            background-color: lightslategray;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+            flex-grow: 0;
+            flex-shrink: 1;
+        }
+
+        div.flex2 {
+            background-color: lightslategray;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+
+        div.flex3 {
+            background-color: lightslategray;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+
+        div.flex4 {
+            background-color: lightslategray;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+
+        div.itema {
+            background-color: lightslategray;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+        }
+
+        div.item1 {
+            background-color: lightslategray;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+
+        div.item2 {
+            background-color: lightslategray;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+            flex-grow: 3;
+            flex-shrink: 2;
+        }
+
+        div.item3 {
+            background-color: lightslategray;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+
+        div.item4 {
+            background-color: lightslategray;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+            flex-grow: 0;
+            flex-shrink: 2;
+        }
+
+        div.item5 {
+            background-color: lightslategray;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+
+        div.item6 {
+            background-color: lightslategray;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+            flex-grow: 3;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>Expansão e Reduçao dos itens</h1>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+        <menu id="itens">
+            <a href="../index.html" rel="prev">Início</a>
+            <a href="../paginas/direcao_quebra.html" rel="next">Direção e Quebra de linha</a>
+            <a href="../paginas/alinhamento.html" rel="next">Alinhamento dos elementos</a>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Ordem dos itens</h2>
+            <p>
+                A propriedade CSS <strong>order</strong> serve para definir a ordem de elementos em um contêiner flex (se atentar a direção flex-direction). Todo item em <strong>flex-box</strong> vai ter <strong>order: 0;</strong>, para alterar acrescentamos o parâmetro <strong>order:</strong> dentro da tag de estilo. A ordem é crescente, ou seja, do menor número (ou número negativo) para o maior, agora segue um exemplo:
+            </p>
+            <div class="janela">
+                <br>
+                <aside class="landscape">
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item" id="a1"&gt;A&lt;/div&gt;
+                &lt;div class="item" id="a2"&gt;B&lt;/div&gt;
+                &lt;div class="item" id="a3"&gt;C&lt;/div&gt;
+                &lt;div class="item" id="a4"&gt;D&lt;/div&gt;
+                &lt;div class="item" id="a5"&gt;E&lt;/div&gt;
+                &lt;div class="item" id="a6"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row nowrap;</mark>
+            }
+            div.item {
+                background-color: darkslategrey;
+                border: 1px solid black;
+                text-align: center;
+                padding: 10px;   
+            }
+            div#a1 {
+                <mark>order: 0;</mark>
+            } 
+            div#a2 {
+                <mark>order: -2;</mark>
+            }
+            div#a3 {
+                <mark>order: 4;</mark>
+            }
+            div#a4 {
+                <mark>order: 8;</mark>
+            }
+            div#a5 {
+                <mark>order: -4;</mark>
+            }
+            div#a6 {
+                <mark>order: 2;</mark>
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+                <aside class="portrait">
+                    <pre>
+                        <code>
+                                              |    div.container {
+    &lt;body&gt;                                    |        background-color: lightsalmon;
+        &lt;div class="container"&gt;               |        <mark>display: flex;</mark>
+            &lt;div class="item" id="a1"&gt;A&lt;/div&gt; |        <mark>flex-flow: row nowrap;</mark>
+            &lt;div class="item" id="a2"&gt;B&lt;/div&gt; |    }
+            &lt;div class="item" id="a3"&gt;C&lt;/div&gt; |    div.item {   
+            &lt;div class="item" id="a4"&gt;D&lt;/div&gt; |        background-color: lightslategray;
+            &lt;div class="item" id="a5"&gt;E&lt;/div&gt; |        border: 1px solid black;
+            &lt;div class="item" id="a6"&gt;F&lt;/div&gt; |        text-align: center;
+        &lt;/div&gt;                                |        padding: 10px;
+    &lt;/body&gt;                                   |    }
+                                              |
+
+div#a1 {      |div#a2 {       |div#a3 {      |div#a4 {      |div#a5 {      |div#a6 {
+    <mark>order: 0;</mark> |    <mark>order: -2;</mark> |    <mark>order: 4;</mark> |    <mark>order: 8;</mark> |    <mark>order: -4;</mark> |    <mark>order: 2;</mark>
+}             |}              |}             |}              |}             |}
+                        </code>
+                    </pre>
+                </aside>
+            </div>
+            <div class="container1">
+                <div class="item" id="a1">A</div>
+                <div class="item" id="a2">B</div>
+                <div class="item" id="a3">C</div>
+                <div class="item" id="a4">D</div>
+                <div class="item" id="a5">E</div>
+                <div class="item" id="a6">F</div>
+            </div>
+        </article>
+        <article class="seg">
+            <h2>Tamanho dos elementos flexíveis</h2>
+            <p>
+                A propriedade CSS <strong>flex-basis</strong> define o tamanho inicial dos elementos flex (itens), antes que o espaço restante seja redistribuído. Ela é usada para determinar a largura ou altura mínima de um elemento antes que ele seja redimensionado (parecido com <strong>width</strong>).
+            </p>
+            <h3>flex-basis: auto; - padrão</h3>
+            <p>
+                Define que o tamanho inicial dos elementos será a largura e altura do próprio elemento, adapta o conteúdo.
+            </p>
+            <div class="janela">
+                <br>
+                <aside>
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;texto1&lt;/div&gt;
+                &lt;div class="item"&gt;texto2&lt;/div&gt;
+                &lt;div class="item"&gt;texto3&lt;/div&gt;
+                &lt;div class="item"&gt;texto4&lt;/div&gt;
+                &lt;div class="item"&gt;texto5&lt;/div&gt;
+                &lt;div class="item"&gt;texto6&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                display: flex;
+                flex-flow: row nowrap;
+            }
+            div.item {
+                background-color: lightslategray;
+                border: 1px solid black;
+                flex-basis: auto;
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+            </div>
+        <h3>Exemplo sem quebra de linha (flex-flow: row nowrap;)</h3>
+        <div class="container1">
+            <div class="basis">texto de exemplo</div>
+            <div class="basis">outro texto de exemplo maior</div>
+            <div class="basis">um texto maior ainda para ver o flex-basis: auto</div>
+            <div class="basis">mais um texto de exemplo</div>
+            <div class="basis">texto se adapta ao seu conteúdo</div>
+            <div class="basis">último texto de exemplo</div>
+        </div>
+        <h3>Exemplo com quebra de linha (flex-flow: row wrap;)</h3>
+        <div class="container2">
+            <div class="basis">texto de exemplo</div>
+            <div class="basis">outro texto de exemplo maior</div>
+            <div class="basis">um texto maior ainda para ver o flex-basis: auto</div>
+            <div class="basis">mais um texto de exemplo</div>
+            <div class="basis">texto se adapta ao seu conteúdo</div>
+            <div class="basis">último texto de exemplo</div>
+        </div>
+        </article>
+        <article class="seg">
+            <h2>Expansão</h2>
+            <p>
+                A propriedade CSS <strong>flex-grow</strong> é usada para definir se os elementos flexíveis se expandem ou não. O valor da propriedade é um número que indica a proporção de espaço em que o item ocupará, se todos os elementos tiverem um <strong>flex-grow: 1;</strong> o espaço restante será dividido igualmente entre todos. Mas se um elemento tiver o <strong>flex-grow: 2;</strong> ele vai expandir o dobro do elemento que tem o <strong>flex-grow: 1;</strong>, e assim adiante. Se o <strong>flex-grow: 0;</strong> o elemento não irá expandir.
+            </p>
+            <h3>flex-grow: 0; - padrão</h3>
+            <p>
+                Não permite a expansão dos elementos flexíveis.
+            </p>
+            <div class="janela">
+                <br>
+                <aside>
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row nowrap;</mark>
+            }
+            div.item {
+                background-color: lightslategray;
+                border: 1px solid black;
+                text-align: center;
+                <mark>flex-basis: 150px;</mark>
+                <mark>flex-grow: 0;</mark>
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+            </div>
+            <div class="container1">
+                <div class="grow0">A</div>
+                <div class="grow0">B</div>
+                <div class="grow0">C</div>
+                <div class="grow0">D</div>
+                <div class="grow0">E</div>
+                <div class="grow0">F</div>
+            </div>
+            <hr>
+            <h3>flex-grow: 1;</h3>
+            <p>
+                Faz a expansão dos elementos flexíveis.
+            </p>
+            <div class="janela">
+                <br>
+                <aside>
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row nowrap;</mark>
+            }
+            div.item {
+                background-color: lightslategray;
+                border: 1px solid black;
+                text-align: center;
+                <mark>flex-basis: 150px;</mark>
+                <mark>flex-grow: 1;</mark>
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+            </div>
+            <div class="container1">
+                <div class="grow1">A</div>
+                <div class="grow1">B</div>
+                <div class="grow1">C</div>
+                <div class="grow1">D</div>
+                <div class="grow1">E</div>
+                <div class="grow1">F</div>
+            </div>
+        </article>
+        <article class="seg">
+            <h2>Redução</h2>
+            <p>
+                A propriedade CSS <strong>flex-shrink</strong> é usada para definir se os elementos flexíveis se reduzem ou não. Se não houver espaço suficiente na linha, o item flexível será reduzido de acordo com o fator de redução flexível. Se o <strong>flex-shrink: 0;</strong> o elemento não encolherá, se <strong>flex-shrink: 1;</strong> os elementos vão encolher, mas não ficará menor que seu conteúdo.
+            </p>
+            <h3>flex-shrink: 1; - padrão</h3>
+            <p>
+                Se a tela diminuir, os elementos também vão diminuir, mas não ficará menor que seu conteúdo.
+            </p>
+            <div class="janela">
+                <br>
+                <aside>
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row nowrap;</mark>
+            }
+            div.item {
+                background-color: lightslategray;
+                border: 1px solid black;
+                text-align: center;
+                <mark>flex-basis: 150px;</mark>
+                <mark>flex-shrink: 1;</mark>
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+            </div>
+            <div class="container1">
+                <div class="shrink1">A</div>
+                <div class="shrink1">B</div>
+                <div class="shrink1">C</div>
+                <div class="shrink1">D</div>
+                <div class="shrink1">E</div>
+                <div class="shrink1">F</div>
+            </div>
+            <hr>
+            <h3>flex-shrink: 0;</h3>
+            <p>
+                Não permite a redução dos elementos flexíveis.
+            </p>
+            <div class="janela">
+                <br>
+                <aside>
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row wrap;</mark>
+            }
+            div.item {
+                background-color: lightslategray;
+                border: 1px solid black;
+                text-align: center;
+                <mark>flex-basis: 150px;</mark>
+                <mark>flex-shrink: 0;</mark>
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+            </div>
+            <div class="container2">
+                <div class="shrink0">A</div>
+                <div class="shrink0">B</div>
+                <div class="shrink0">C</div>
+                <div class="shrink0">D</div>
+                <div class="shrink0">E</div>
+                <div class="shrink0">F</div>
+            </div>
+        </article>
+        <article class="seg">
+            <h2>Agora juntando os 2 atributos expansão + redução</h2>
+            <h3>flex-grow: 0; + flex-shrink: 1; - padrão</h3>
+            <p>
+                Não permite a expansão dos elementos flexíveis + se a tela diminuir, os elementos também vão diminuir, mas não ficará menor que seu conteúdo.
+            </p>
+            <div class="janela">
+                <aside>
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row nowrap;</mark>
+            }
+            div.item {
+                background-color: lightslategray;
+                border: 1px solid black;
+                text-align: center;
+                <mark>flex-basis: 150px;</mark>
+                <mark>flex-grow: 0;</mark>
+                <mark>flex-shrink: 1;</mark>
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+            </div>
+            <div class="container1">
+                <div class="flex1">A</div>
+                <div class="flex1">B</div>
+                <div class="flex1">C</div>
+                <div class="flex1">D</div>
+                <div class="flex1">E</div>
+                <div class="flex1">F</div>
+            </div>
+            <hr>
+            <h3>flex-grow: 0; + flex-shrink: 0;</h3>
+            <p>
+                Não permite a expansão dos elementos flexíveis + não permite a redução dos elementos flexíveis.
+            </p>
+            <div class="janela">
+                <aside>
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row wrap;</mark>
+            }
+            div.item {
+                background-color: lightslategray;
+                border: 1px solid black;
+                text-align: center;
+                <mark>flex-basis: 150px;</mark>
+                <mark>flex-grow: 0;</mark>
+                <mark>flex-shrink: 0;</mark>
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+            </div>
+            <div class="container2">
+                <div class="flex2">A</div>
+                <div class="flex2">B</div>
+                <div class="flex2">C</div>
+                <div class="flex2">D</div>
+                <div class="flex2">E</div>
+                <div class="flex2">F</div>
+            </div>
+            <hr>
+            <h3>flex-grow: 1; + flex-shrink: 1;</h3>
+            <p>
+                Faz a expansão do elemento flexível + se a tela diminuir, os elementos também vão diminuir, mas não ficará menor que seu conteúdo.
+            </p>
+            <div class="janela">
+                <aside>
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row nowrap;</mark>
+            }
+            div.item {
+                background-color: lightslategray;
+                border: 1px solid black;
+                text-align: center;
+                <mark>flex-basis: 150px;</mark>
+                <mark>flex-grow: 1;</mark>
+                <mark>flex-shrink: 1;</mark>
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+            </div>
+            <div class="container1">
+                <div class="flex3">A</div>
+                <div class="flex3">B</div>
+                <div class="flex3">C</div>
+                <div class="flex3">D</div>
+                <div class="flex3">E</div>
+                <div class="flex3">F</div>
+            </div>
+            <hr>
+            <h3>flex-grow: 1; + flex-shrink: 0;</h3>
+            <p>
+                Faz a expansão dos elementos flexíveis + não permite a redução dos elementos flexíveis.
+            </p>
+            <div class="janela">
+                <aside>
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item"&gt;D&lt;/div&gt;
+                &lt;div class="item"&gt;E&lt;/div&gt;
+                &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row wrap;</mark>
+            }
+            div.item {
+                background-color: lightslategray;
+                border: 1px solid black;
+                text-align: center;
+                <mark>flex-basis: 150px;</mark>
+                <mark>flex-grow: 1;</mark>
+                <mark>flex-shrink: 0;</mark>
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+            </div>
+            <div class="container2">
+                <div class="flex4">A</div>
+                <div class="flex4">B</div>
+                <div class="flex4">C</div>
+                <div class="flex4">D</div>
+                <div class="flex4">E</div>
+                <div class="flex4">F</div>
+            </div>
+        </article>    
+        <article class="seg">
+            <h3>Também conseguimos mudar o valor, assim mudando a proporção, por exemplo:</h3>
+            <p>
+                O 1° contêiner é ele normal (sem expandir nem reduzir), o 2° contêiner é ele expandido, já o 3° é ele reduzido.
+            </p>
+            <img class="peq" src="../imagens/grow-shrink-edit.png" alt="Modelo de Flexbox">
+            <p>
+                Observe que todos os elementos tem <strong>flex-basis: 150px;</strong>, porém os <strong>flex-grow</strong> e <strong>flex-shrink</strong> são diferentes.
+            </p>
+            <ul>
+                <li>O 1° elemento tem um <strong>flex-grow: 0;</strong> (não permite a expansão do elemento) e <strong>flex-shrink: 1;</strong> (reduz se a tela for diminuida) = quando aumentar a tela, o elemento não muda, mas quando diminuir a tela, o elemento reduz.</li>
+                <li>O 2° elemento tem um <strong>flex-grow: 2;</strong> (faz expansão do elemento) e <strong>flex-shrink: 0;</strong> (não permite a redução do elemento) = quando aumentar a tela, o elemento expande, e quando diminuir a tela, o elemento não reduz.</li>
+                <li>O 3° elemento tem um <strong>flex-grow: 1;</strong> (não permite a expansão do elemento) e <strong>flex-shrink: 2;</strong> (reduz se a tela for diminuida) = quando aumentar a tela, o elemento expande, e quando diminuir a tela, o elemento reduz.</li>
+            </ul>
+            <p>
+                Da para perceber que quando expandido o 2° elemento aumentou mais do que o 3° elemento, isso porque, o valor do 2° elemento "fala" que ele vai aumentar 2x mais que o 3° elemento. Isso também ocorre com o 1° elemento e o 3° elemento quando a tela é reduzida. Um valor maior "fala" que o elemento vai ser expandido ou reduzido em dobro, em triplo, etc. Agora vou mostrar outros exemplos (aumente e diminua a tela):
+            </p>
+            <div class="janela">
+                <br>
+                <aside class="landscape">
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item1"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item2"&gt;D&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row nowrap;</mark>
+            }
+            div.item {
+                background-color: lightslategray;
+                border: 1px solid black;
+                text-align: center;
+                <mark>flex-basis: 150px;</mark>
+            }
+            div.item1 {
+                <mark>flex-basis: 150px;</mark>
+                <mark>flex-grow: 1;</mark>
+                <mark>flex-shrink: 1;</mark>
+            }
+            div.item2 {
+                <mark>flex-basis: 150px;</mark>
+                <mark>flex-grow: 0;</mark>
+                <mark>flex-shrink: 2;</mark>
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+                <aside class="portrait">
+                    <pre>
+                        <code>
+                                       |    div.container {
+    &lt;body&gt;                             |        background-color: lightsalmon;
+        &lt;div class="container"&gt;        |        <mark>display: flex;</mark>
+            &lt;div class="item"&gt;A&lt;/div&gt;  |        <mark>flex-flow: row nowrap;</mark>
+            &lt;div class="item1"&gt;B&lt;/div&gt; |    }
+            &lt;div class="item"&gt;C&lt;/div&gt;  |    div.item {
+            &lt;div class="item2"&gt;D&lt;/div&gt; |        background-color: lightslategray;
+        &lt;/div&gt;                         |        border: 1px solid black;
+    &lt;/body&gt;                            |        text-align: center;
+                                       |        <mark>flex-basis: 150px;</mark>
+                                            }
+
+                div.item1 {                    div.item2 {
+                    <mark>flex-basis: 150px;</mark>             <mark>flex-basis: 150px;</mark>
+                    <mark>flex-grow: 1;</mark>                  <mark>flex-grow: 0;</mark>
+                    <mark>flex-shrink: 1;</mark>                <mark>flex-shrink: 2;</mark>
+                }                              }
+                        </code>
+                    </pre>
+                </aside>
+            </div>
+            <div class="container1">
+                <div class="itema">A</div>
+                <div class="item1">B</div>
+                <div class="itema">C</div>
+                <div class="item2">D</div>
+            </div>
+            <hr>
+            <div class="janela">
+                <br>
+                <aside class="landscape">
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item1"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item2"&gt;D&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row nowrap;</mark>
+            }
+            div.item {
+                background-color: lightslategray;
+                border: 1px solid black;
+                text-align: center;
+                <mark>flex-basis: 150px;</mark>
+            }
+            div.item1 {
+                <mark>flex-basis: 150px;</mark>
+                <mark>flex-grow: 0;</mark>
+                <mark>flex-shrink: 2;</mark>
+            }
+            div.item2 {
+                <mark>flex-basis: 150px;</mark>
+                <mark>flex-grow: 0;</mark>
+                <mark>flex-shrink: 1;</mark>
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+                <aside class="portrait">
+                    <pre>
+                        <code>
+                                       |    div.container {
+    &lt;body&gt;                             |        background-color: lightsalmon;
+        &lt;div class="container"&gt;        |        <mark>display: flex;</mark>
+            &lt;div class="item"&gt;A&lt;/div&gt;  |        <mark>flex-flow: row nowrap;</mark>
+            &lt;div class="item1"&gt;B&lt;/div&gt; |    }
+            &lt;div class="item"&gt;C&lt;/div&gt;  |    div.item {
+            &lt;div class="item2"&gt;D&lt;/div&gt; |        background-color: lightslategray;
+        &lt;/div&gt;                         |        border: 1px solid black;
+    &lt;/body&gt;                            |        text-align: center;
+                                       |        <mark>flex-basis: 150px;</mark>
+                                            }
+
+                div.item1 {                    div.item2 {
+                    <mark>flex-basis: 150px;</mark>             <mark>flex-basis: 150px;</mark>
+                    <mark>flex-grow: 0;</mark>                  <mark>flex-grow: 0;</mark>
+                    <mark>flex-shrink: 2;</mark>                <mark>flex-shrink: 1;</mark>
+                }                              }
+                        </code>
+                    </pre>
+                </aside>
+            </div>
+            <div class="container1">
+                <div class="itema">A</div>
+                <div class="item3">B</div>
+                <div class="itema">C</div>
+                <div class="item4">D</div>
+            </div>
+            <hr>
+        </article>
+    </main>
+    <footer>
+        <p>Esse site foi feito por Bruno Henrique afins de estudos!</p>
+    </footer>
+
+    <script>
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+    </script>
+</body>
+</html>
