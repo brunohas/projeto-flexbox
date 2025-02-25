@@ -1056,6 +1056,20 @@ div#a1 {      |div#a2 {       |div#a3 {      |div#a4 {      |div#a5 {      |div#
             </div>
             <hr>
         </article>
+        <article class="seg">
+            <h2>Flex</h2>
+            <p>
+                A propriedade CSS <strong>flex</strong> é a abreviação para {<strong>flex-grow</strong> → <strong>flex-shrink</strong> → <strong>flex-basis</strong>}, exemplo: <strong>flex-grow: 0; flex-shrink: 1; flex-basis: 250px;</strong> é a mesma coisa que <strong>flex: 0 1 250px;</strong>. É recomendado usar a propriedade flex em vez de definir cada uma das propriedades separadamente. Agora segue algumas opções mais utilizadas:
+            </p>
+            <div class="janela">
+                <ul>
+                    <li><strong>flex: 0 1 auto;</strong> &rarr; não permite expansão + se a tela diminuir, elementos vão reduzir + define largura e altura máxima dos elementos (padrão), que é a mesma coisa que <strong>flex: initial</strong>.</li>
+                    <li><strong>flex: 0 0 auto;</strong> &rarr; não permite expansão + não permite redução + define largura e altura máxima dos elementos (não flexível), que é a mesma coisa que <strong>flex: none;</strong>.</li>
+                    <li><strong>flex: 1 1 auto;</strong> &rarr; permite expansão + se a tela diminuir, elementos vão reduzir + define largura e altura máxima dos elementos (flexível), que é a mesma coisa que <strong>flex: auto</strong>.</li>
+                    <li><strong>flex: <abbr title="qualquer número">n°</abbr>;</strong> &rarr; representa que o <strong>flex-grow</strong> é o número escolhido, e o <strong>flex-shrink</strong> e <strong>flex-basis</strong> ficam com o valor padrão, que no caso ficaria <strong>flex: número escolhido 1 auto;</strong>.</li>
+                </ul>
+            </div>
+        </article>
     </main>
     <footer>
         <p>Esse site foi feito por Bruno Henrique afins de estudos!</p>

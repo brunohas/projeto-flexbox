@@ -147,6 +147,8 @@ img.peq {
 ul {
     list-style-position: inside;
     list-style-type: '\1F9E0\00A0';
+    font-size: 0.9em;
+    padding: 5px;
 }
 
 ul.dois {
