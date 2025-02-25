@@ -176,7 +176,7 @@
             border: 1px solid black;
             text-align: center;
             flex-basis: 150px;
-            flex-grow: 1;
+            flex-grow: 2;
             flex-shrink: 0;
         }
 
@@ -187,6 +187,24 @@
             flex-basis: 150px;
             flex-grow: 3;
             flex-shrink: 0;
+        }
+
+        div.item7 {
+            background-color: lightslategray;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+            flex-grow: 0;
+            flex-shrink: 2;
+        }
+
+        div.item8 {
+            background-color: lightslategray;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+            flex-grow: 0;
+            flex-shrink: 1;
         }
     </style>
 </head>
@@ -782,11 +800,11 @@ div#a1 {      |div#a2 {       |div#a3 {      |div#a4 {      |div#a5 {      |div#
             div.item1 {
                 <mark>flex-basis: 150px;</mark>
                 <mark>flex-grow: 1;</mark>
-                <mark>flex-shrink: 1;</mark>
+                <mark>flex-shrink: 0;</mark>
             }
             div.item2 {
                 <mark>flex-basis: 150px;</mark>
-                <mark>flex-grow: 0;</mark>
+                <mark>flex-grow: 3;</mark>
                 <mark>flex-shrink: 2;</mark>
             }
         &lt;/style&gt;
@@ -810,8 +828,8 @@ div#a1 {      |div#a2 {       |div#a3 {      |div#a4 {      |div#a5 {      |div#
 
                 div.item1 {                    div.item2 {
                     <mark>flex-basis: 150px;</mark>             <mark>flex-basis: 150px;</mark>
-                    <mark>flex-grow: 1;</mark>                  <mark>flex-grow: 0;</mark>
-                    <mark>flex-shrink: 1;</mark>                <mark>flex-shrink: 2;</mark>
+                    <mark>flex-grow: 1;</mark>                  <mark>flex-grow: 3;</mark>
+                    <mark>flex-shrink: 0;</mark>                <mark>flex-shrink: 2;</mark>
                 }                              }
                         </code>
                     </pre>
@@ -852,7 +870,149 @@ div#a1 {      |div#a2 {       |div#a3 {      |div#a4 {      |div#a5 {      |div#
             }
             div.item1 {
                 <mark>flex-basis: 150px;</mark>
+                <mark>flex-grow: 1;</mark>
+                <mark>flex-shrink: 1;</mark>
+            }
+            div.item2 {
+                <mark>flex-basis: 150px;</mark>
                 <mark>flex-grow: 0;</mark>
+                <mark>flex-shrink: 2;</mark>
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+                <aside class="portrait">
+                    <pre>
+                        <code>
+                                       |    div.container {
+    &lt;body&gt;                             |        background-color: lightsalmon;
+        &lt;div class="container"&gt;        |        <mark>display: flex;</mark>
+            &lt;div class="item"&gt;A&lt;/div&gt;  |        <mark>flex-flow: row nowrap;</mark>
+            &lt;div class="item1"&gt;B&lt;/div&gt; |    }
+            &lt;div class="item"&gt;C&lt;/div&gt;  |    div.item {
+            &lt;div class="item2"&gt;D&lt;/div&gt; |        background-color: lightslategray;
+        &lt;/div&gt;                         |        border: 1px solid black;
+    &lt;/body&gt;                            |        text-align: center;
+                                       |        <mark>flex-basis: 150px;</mark>
+                                            }
+
+                div.item1 {                    div.item2 {
+                    <mark>flex-basis: 150px;</mark>             <mark>flex-basis: 150px;</mark>
+                    <mark>flex-grow: 1;</mark>                  <mark>flex-grow: 0;</mark>
+                    <mark>flex-shrink: 1;</mark>                <mark>flex-shrink: 2;</mark>
+                }                              }
+                        </code>
+                    </pre>
+                </aside>
+            </div>
+            <div class="container1">
+                <div class="itema">A</div>
+                <div class="item3">B</div>
+                <div class="itema">C</div>
+                <div class="item4">D</div>
+            </div>
+            <hr>
+            <div class="janela">
+                <br>
+                <aside class="landscape">
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item1"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item2"&gt;D&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row nowrap;</mark>
+            }
+            div.item {
+                background-color: lightslategray;
+                border: 1px solid black;
+                text-align: center;
+                <mark>flex-basis: 150px;</mark>
+            }
+            div.item1 {
+                <mark>flex-basis: 150px;</mark>
+                <mark>flex-grow: 2;</mark>
+                <mark>flex-shrink: 0;</mark>
+            }
+            div.item2 {
+                <mark>flex-basis: 150px;</mark>
+                <mark>flex-grow: 3;</mark>
+                <mark>flex-shrink: 0;</mark>
+            }
+        &lt;/style&gt;
+                        </code>
+                    </pre>
+                </aside>
+                <aside class="portrait">
+                    <pre>
+                        <code>
+                                       |    div.container {
+    &lt;body&gt;                             |        background-color: lightsalmon;
+        &lt;div class="container"&gt;        |        <mark>display: flex;</mark>
+            &lt;div class="item"&gt;A&lt;/div&gt;  |        <mark>flex-flow: row nowrap;</mark>
+            &lt;div class="item1"&gt;B&lt;/div&gt; |    }
+            &lt;div class="item"&gt;C&lt;/div&gt;  |    div.item {
+            &lt;div class="item2"&gt;D&lt;/div&gt; |        background-color: lightslategray;
+        &lt;/div&gt;                         |        border: 1px solid black;
+    &lt;/body&gt;                            |        text-align: center;
+                                       |        <mark>flex-basis: 150px;</mark>
+                                            }
+
+                div.item1 {                    div.item2 {
+                    <mark>flex-basis: 150px;</mark>             <mark>flex-basis: 150px;</mark>
+                    <mark>flex-grow: 2;</mark>                  <mark>flex-grow: 3;</mark>
+                    <mark>flex-shrink: 0;</mark>                <mark>flex-shrink: 0;</mark>
+                }                              }
+                        </code>
+                    </pre>
+                </aside>
+            </div>
+            <div class="container1">
+                <div class="itema">A</div>
+                <div class="item5">B</div>
+                <div class="itema">C</div>
+                <div class="item6">D</div>
+            </div>
+            <hr>
+            <div class="janela">
+                <br>
+                <aside class="landscape">
+                    <pre>
+                        <code>
+        &lt;body&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="item"&gt;A&lt;/div&gt;
+                &lt;div class="item1"&gt;B&lt;/div&gt;
+                &lt;div class="item"&gt;C&lt;/div&gt;
+                &lt;div class="item2"&gt;D&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+
+        &lt;style&gt;
+            div.container {
+                background-color: lightsalmon;
+                <mark>display: flex;</mark>
+                <mark>flex-flow: row nowrap;</mark>
+            }
+            div.item {
+                background-color: lightslategray;
+                border: 1px solid black;
+                text-align: center;
+                <mark>flex-basis: 150px;</mark>
+            }
+            div.item1 {
+                <mark>flex-basis: 150px;</mark>
+                <mark>flex-grow: 1;</mark>
                 <mark>flex-shrink: 2;</mark>
             }
             div.item2 {
@@ -881,7 +1041,7 @@ div#a1 {      |div#a2 {       |div#a3 {      |div#a4 {      |div#a5 {      |div#
 
                 div.item1 {                    div.item2 {
                     <mark>flex-basis: 150px;</mark>             <mark>flex-basis: 150px;</mark>
-                    <mark>flex-grow: 0;</mark>                  <mark>flex-grow: 0;</mark>
+                    <mark>flex-grow: 1;</mark>                  <mark>flex-grow: 0;</mark>
                     <mark>flex-shrink: 2;</mark>                <mark>flex-shrink: 1;</mark>
                 }                              }
                         </code>
@@ -890,9 +1050,9 @@ div#a1 {      |div#a2 {       |div#a3 {      |div#a4 {      |div#a5 {      |div#
             </div>
             <div class="container1">
                 <div class="itema">A</div>
-                <div class="item3">B</div>
+                <div class="item7">B</div>
                 <div class="itema">C</div>
-                <div class="item4">D</div>
+                <div class="item8">D</div>
             </div>
             <hr>
         </article>
